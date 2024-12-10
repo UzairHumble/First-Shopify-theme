@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -41,6 +50,7 @@
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -59,7 +69,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
         }
       },
@@ -68,6 +78,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
@@ -79,17 +91,25 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -127,6 +147,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -136,8 +157,9 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "scheme-1",
@@ -152,7 +174,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -161,7 +183,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -170,7 +192,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
@@ -191,11 +213,20 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_liquid_D9Ez8x": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"entry-content\">\n\t\t<blockquote>\n<p><img src=\"https://cdn.shopify.com/s/files/1/0582/3361/8547/files/image2_9c3ab84a-34ac-4a37-86e1-c20c80d0a73c_480x480.png?v=1696573077\" alt=\"\" data-mce-fragment=\"1\" data-mce-src=\"https://cdn.shopify.com/s/files/1/0582/3361/8547/files/image2_9c3ab84a-34ac-4a37-86e1-c20c80d0a73c_480x480.png?v=1696573077\"></p>\n</blockquote>\n<h2 style=\"text-align: left;\" data-mce-style=\"text-align: left;\"><b>Today Gold Rate&nbsp;</b></h2>\n<p>&nbsp;</p>\n<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSpcrDqeHiHaOmpZuLvtTEjCqln6-KlMAypVpSOKCX3B2067Q67j6WIC_KCJqD0dI45HdypmDIvUMwH/pubhtml?gid=1883462982&amp;single=true&amp;widget=true&amp;headers=false\" width=\"800\" height=\"1200\"></iframe>\n<p style=\"text-align: left;\">Today's Gold Prices in Karachi reveal that 24K gold is priced at <span data-mce-fragment=\"1\">Rs.249150</span><span data-mce-fragment=\"1\">&nbsp;</span>for 10 grams and&nbsp;<span data-mce-fragment=\"1\">Rs.213609.6 </span>per tola, based on the data as per today, from the Karachi <a href=\"https://www.investing.com/\" title=\"https://www.investing.com/\">Jewelers</a> Association. Keep in mind these rates are subject to change following international market trends.&nbsp;</p>\n<p style=\"text-align: left;\">While 24K is the purest form you can get, options are available in 22K, 21K, 20K, and 18K as well. As of the latest update, the price for 1 grams of 22K gold is Rs.18954 in Karachi. Be sure to stay tuned for real-time updates on gold rates across all karats.&nbsp;</p>\n<p>This table compares gold values for 24K and 22K purity levels in 10 grams and a tola units. 24K gold, known as pure gold, is too soft for jewelry, while 22K, comprising 91.7% gold and 8.3% alloys like copper, offers more durability and affordability.</p>\n<h2><b></b></h2>\n<p><span></span><b>Gold Performance in Karachi (Last 1 year)</b></p>\n<p>This table shows the gold performance in Karachi over the last 1 year, with the difference in price (in Pakistani Rupees) and percentage change from the previous time period.</p>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<table xmlns=\"http://www.w3.org/1999/xhtml\" cellspacing=\"0\" cellpadding=\"0\" dir=\"ltr\" border=\"1\" data-sheets-root=\"1\" data-mce-fragment=\"1\">\n<colgroup data-mce-fragment=\"1\"> <col width=\"100\" data-mce-fragment=\"1\"> <col width=\"122\" data-mce-fragment=\"1\"> <col width=\"100\" data-mce-fragment=\"1\"> </colgroup>\n<tbody data-mce-fragment=\"1\">\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Period&quot;}\" data-mce-fragment=\"1\"><strong>Period</strong></td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Difference (PKR)&quot;}\" data-mce-fragment=\"1\"><strong>Difference (PKR)</strong></td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Difference (%)&quot;}\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><strong>Difference (%)</strong></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Yesterday Difference&quot;}\" data-mce-fragment=\"1\">Yesterday Difference</td>\n<td data-sheets-value=\"{&quot;1&quot;:3,&quot;3&quot;:0}\" data-mce-fragment=\"1\">0</td>\n<td data-sheets-value=\"{&quot;1&quot;:3,&quot;3&quot;:0}\" data-mce-fragment=\"1\">0</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Last Month Difference&quot;}\" data-mce-fragment=\"1\">Last Month Difference</td>\n<td data-sheets-value=\"{&quot;1&quot;:3,&quot;3&quot;:8350}\" data-mce-fragment=\"1\">8350</td>\n<td data-sheets-value=\"{&quot;1&quot;:3,&quot;3&quot;:3.47}\" data-mce-fragment=\"1\">3.47</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Last Year Difference&quot;}\" data-mce-fragment=\"1\">Last Year Difference</td>\n<td data-sheets-value=\"{&quot;1&quot;:3,&quot;3&quot;:42350}\" data-mce-fragment=\"1\">42350</td>\n<td data-sheets-value=\"{&quot;1&quot;:3,&quot;3&quot;:20.48}\" data-mce-fragment=\"1\">20.48</td>\n</tr>\n</tbody>\n</table>\n<p><br><br><br><br></p>\n<p><span style=\"font-weight: 400;\">It is important to note that past performance is not indicative of future results. The gold market is unpredictable and can be affected by a number of factors, including conomic conditions, interest rates, and geopolitical events.</span></p>\n<h2><b>Gold Rate in Karachi Today</b></h2>\n<p>This upswing can be attributed to several contributing factors, including mounting <a href=\"http://www.tribune.com.pk/\" title=\"http://www.tribune.com.pk/\">inflation rates</a>, heightened demand for gold as a secure asset, and a constricted supply of gold.</p>\n<p>It's important to recognize that the gold market is inherently open to fluctuations, influenced by diverse factors such as global <a href=\"https://www.pakistaneconomist.com/\" title=\"https://www.pakistaneconomist.com/\">economic</a> conditions, shifts in interest rates, currency value fluctuations, and geopolitical events. However, the overarching trend for gold prices is indicative of a consistent upward trend.</p>\n<p><span style=\"font-weight: 400;\">To further visualize these trends and gain a more lucid understanding, </span><span style=\"font-weight: 400;\">the following graph offers a concise overview of gold rates in Karachi over the past 30 days, detailing the variations across different purities. </span></p>\n<p><span style=\"font-weight: 400;\">By observing the trends, one can estimate the daily cost of gold, whether in terms of grams or the traditional unit of 'tola' commonly used in Pakistan.&nbsp;</span></p>\n<p><span style=\"font-weight: 400;\"></span><span style=\"font-weight: 400;\"> <iframe height=\"600\" width=\"100%\" src=\"https://goldbroker.com/widget/live/XAU?currency=USD&amp;height=600\" frameborder=\"0\" scrolling=\"no\">\n\nThe line graph above presents a detailed insight into the daily gold rates in Karachi over the span of 30 days, ranging from 15nd October 2023 to 16th November 2023. The statistics provided cover various karats and measurements of gold, thus giving a comprehensive view of the gold market in Karachi during this period.</iframe></span></p>\n<h2><span style=\"font-weight: 400;\">Today Gold Prices in Major Cities of Pakistan</span></h2>\n<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<table xmlns=\"http://www.w3.org/1999/xhtml\" cellspacing=\"0\" cellpadding=\"0\" dir=\"ltr\" border=\"1\" data-sheets-root=\"1\" data-mce-fragment=\"1\">\n<colgroup data-mce-fragment=\"1\"> <col width=\"105\" data-mce-fragment=\"1\"> <col width=\"100\" data-mce-fragment=\"1\"> </colgroup>\n<tbody data-mce-fragment=\"1\">\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Top Cities&quot;}\" data-mce-fragment=\"1\"><strong>Top Cities</strong></td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Visit for Updared Price&quot;}\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><strong>Visit for Updated Price</strong></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Islamabad&quot;}\" data-mce-fragment=\"1\">Islamabad</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Islamabad&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-islamabad\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-islamabad\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-islamabad\" target=\"_blank\">Gold Rate in Islamabad</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Karachi&quot;}\" data-mce-fragment=\"1\">Karachi</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Karachi&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-karachi\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-karachi\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-karachi\" target=\"_blank\">Gold Rate in Karachi</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Faisalabad&quot;}\" data-mce-fragment=\"1\">Faisalabad</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Faisalabad&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-faisalabad\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-faisalabad\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-faisalabad\" target=\"_blank\">Gold Rate in Faisalabad</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Quetta&quot;}\" data-mce-fragment=\"1\">Quetta</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Quetta&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-quetta\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-quetta\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-quetta\" target=\"_blank\">Gold Rate in Quetta</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Lahore&quot;}\" data-mce-fragment=\"1\">Lahore</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Lahore&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-lahore\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-lahore\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-lahore\" target=\"_blank\">Gold Rate in Lahore</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Peshawar&quot;}\" data-mce-fragment=\"1\">Peshawar</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Peshawer&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-peshawar\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-peshawar\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-peshawar\" target=\"_blank\">Gold Rate in Peshawer</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gilgit&quot;}\" data-mce-fragment=\"1\">Gilgit</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Gilgit&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-gilgit\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-gilgit\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-gilgit\" target=\"_blank\">Gold Rate in Gilgit</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Sailkot&quot;}\" data-mce-fragment=\"1\">Sailkot</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Sailkot&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-sialkot\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-sialkot\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-sialkot\" target=\"_blank\">Gold Rate in Sailkot</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Skardu&quot;}\" data-mce-fragment=\"1\">Skardu</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Skardu&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-skardu\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-skardu\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-skardu\" target=\"_blank\">Gold Rate in Skardu</a></div>\n</div>\n</td>\n</tr>\n<tr data-mce-fragment=\"1\">\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Sukkur&quot;}\" data-mce-fragment=\"1\">Sukkur</td>\n<td data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Gold Rate in Sakkur&quot;}\" data-sheets-hyperlink=\"https://alita.pk/pages/gold-rate-in-sukkur\" data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\">\n<div data-mce-fragment=\"1\"><a class=\"in-cell-link\" href=\"https://alita.pk/pages/gold-rate-in-sukkur\" data-mce-fragment=\"1\" data-mce-href=\"https://alita.pk/pages/gold-rate-in-sukkur\" target=\"_blank\">Gold Rate in Sakkur</a></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<br><br><br>\n<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n<style type=\"text/css\" data-mce-fragment=\"1\"><!--\ntd {border: 1px solid #cccccc;}br {mso-data-placement:same-cell;}\n--></style>\n\t</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -205,6 +236,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "custom_liquid_D9Ez8x"
   ]
 }

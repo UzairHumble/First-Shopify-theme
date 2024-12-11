@@ -1,4 +1,10 @@
 <section class="gold-rate-chart">
   <h2>Gold Rate Chart</h2>
-  <div id="chart-container"></div>
+  <div id="chart-container">
+    // Assuming you've fetched gold rate data into a variable 'goldRates'
+
+    // Create a line chart using Chart.js const ctx = document.getElementById('chart-container').getContext('2d'); const
+    myChart = new Chart(ctx, { type: 'line', data: { labels: goldRates.labels, datasets: [{ label: 'Gold Rate', data:
+    goldRates.data, borderColor: 'rgb(255, 99, 132)', fill: false }] } });
+  </div>
 </section>

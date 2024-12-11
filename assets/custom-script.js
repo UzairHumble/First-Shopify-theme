@@ -1,6 +1,6 @@
 (function() {
   var goldApiUrl = 'https://www.goldapi.io/api/XAU/USD';
-  var goldApiKey = 'YOUR_API_KEY';
+  var goldApiKey = 'goldapi-bq53o1sm4kidana-io';
 
   $.ajax({
     url: goldApiUrl,

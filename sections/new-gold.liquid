@@ -1,1 +1,21 @@
-https://api.metalpriceapi.com/v1/latest ?api_key=b5642a825d74aae24e12df4cc43eae3b &base=USD &currencies=EUR,XAU,XAG
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    const data = null;
+
+    const xhr = new XMLHttpRequest(); xhr.withCredentials = true;
+
+    xhr.addEventListener('readystatechange', function () { if (this.readyState === this.DONE) {
+    console.log(this.responseText); } });
+
+    xhr.open('GET', 'https://gold-rates.p.rapidapi.com/api?date=2022-01-01'); xhr.setRequestHeader('x-rapidapi-key',
+    '2f68dbf11cmsha9ad1111ff91fa8p1b9c9ejsnc5c480da1d25'); xhr.setRequestHeader('x-rapidapi-host',
+    'gold-rates.p.rapidapi.com');
+
+    xhr.send(data);
+  </body>
+</html>

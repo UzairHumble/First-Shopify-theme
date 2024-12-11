@@ -223,7 +223,7 @@
     "custom_liquid_tmTB99": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MP6S3R7\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+        "custom_liquid": "",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52

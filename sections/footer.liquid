@@ -337,7 +337,34 @@
   >
   </div>
 -->
-<!-- 
+<!--
+  <div class="market-history">
+  <div class="row history_switch">
+    <div class="col-lg-9">
+      <div class="heading pt-2">
+        <h1 class="d-inline" title="GOLD (Today Price, Live Updates)">GOLD Rate in Pakistan today</h1>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="filter float-lg-right float-sm-left pt-1">
+        <nav class="border bg-white">
+          <div class="nav nav-tabs bg-white border-0" id="tabs" role="tablist">
+            <a
+              class="nav-item nav-link active"
+              data-target="#forex-price-history"
+              data-toggle="switch_tabs"
+              >Price</a
+            >
+            <a
+              href="GOLD"
+              class="nav-item nav-link"
+              data-target="#commodities-trading"
+              data-toggle="switch_tabs"
+              >TradingView</a
+            >
+            <!--
+              <a href="https://sarmaaya.pk/ajax/widgets/commodities_sip_new.php?symbol=GOLD" class="nav-item nav-link" data-target="#sip-chart" data-toggle="switch_tabs">SIP</a>
+-->
 <div class="market-history">
   <div class="row history_switch">
     <div class="col-lg-9">
@@ -385,7 +412,7 @@
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a
                       href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=1d"
-                      class="nav-item nav-link"
+                      class="nav-item nav-link active"
                       id="nav-1d-tab"
                       data-toggle="tabajax"
                       data-target="#nav-1d"
@@ -396,13 +423,13 @@
                       >1d</a
                     >
                     <a
-                      class="nav-item nav-link active"
+                      class="nav-item nav-link"
                       id="nav-1w-tab"
                       data-toggle="tabajax"
                       href="#nav-1w"
                       role="tab"
                       aria-controls="nav-1w"
-                      aria-selected="true"
+                      aria-selected="false"
                       title="1w"
                       >1w</a
                     >
@@ -498,9 +525,757 @@
         </div>
         <div class="card-body">
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade" id="nav-1d" role="tabpanel" aria-labelledby="nav-1d-tab"></div>
             <div
-              class="tab-pane fade show active"
+              class="tab-pane fade active show"
+              id="nav-1d"
+              role="tabpanel"
+              aria-labelledby="nav-1d-tab"
+            >
+              <div
+                class="chartjs-size-monitor"
+                style="
+                  position: absolute;
+                  inset: 0px;
+                  overflow: hidden;
+                  pointer-events: none;
+                  visibility: hidden;
+                  z-index: -1;
+                "
+              >
+                <div
+                  class="chartjs-size-monitor-expand"
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    overflow: hidden;
+                    pointer-events: none;
+                    visibility: hidden;
+                    z-index: -1;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      width: 1000000px;
+                      height: 1000000px;
+                      left: 0;
+                      top: 0;
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="chartjs-size-monitor-shrink"
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    overflow: hidden;
+                    pointer-events: none;
+                    visibility: hidden;
+                    z-index: -1;
+                  "
+                >
+                  <div
+                    style="
+                      position: absolute;
+                      width: 200%;
+                      height: 200%;
+                      left: 0;
+                      top: 0;
+                    "
+                  ></div>
+                </div>
+              </div>
+              <canvas
+                id="commodity_price_chart-1d"
+                class="chartjs-render-monitor"
+                height="522"
+                style="display: block; width: 654px; height: 261px"
+                width="1308"
+              ></canvas>
+
+              <script src="https://sarmaaya.pk/js/chartjs/chart.min.js"></script>
+
+              <script>
+                var jsonfile = {
+                  status: "success",
+                  from: "DB",
+                  data: [
+                    {
+                      s_date: "Dec 11, 24 00:00:03",
+                      0: "Dec 11, 24 00:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 00:30:03",
+                      0: "Dec 11, 24 00:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 01:00:02",
+                      0: "Dec 11, 24 01:00:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 01:30:03",
+                      0: "Dec 11, 24 01:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 02:00:03",
+                      0: "Dec 11, 24 02:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 02:30:02",
+                      0: "Dec 11, 24 02:30:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 03:00:02",
+                      0: "Dec 11, 24 03:00:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 03:30:02",
+                      0: "Dec 11, 24 03:30:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 04:00:03",
+                      0: "Dec 11, 24 04:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 04:30:03",
+                      0: "Dec 11, 24 04:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 05:00:03",
+                      0: "Dec 11, 24 05:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 05:30:02",
+                      0: "Dec 11, 24 05:30:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 06:00:03",
+                      0: "Dec 11, 24 06:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 06:30:04",
+                      0: "Dec 11, 24 06:30:04",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 07:00:02",
+                      0: "Dec 11, 24 07:00:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 07:30:02",
+                      0: "Dec 11, 24 07:30:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 08:00:03",
+                      0: "Dec 11, 24 08:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 08:30:02",
+                      0: "Dec 11, 24 08:30:02",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 09:00:03",
+                      0: "Dec 11, 24 09:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 09:30:03",
+                      0: "Dec 11, 24 09:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 10:00:03",
+                      0: "Dec 11, 24 10:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 10:30:03",
+                      0: "Dec 11, 24 10:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 11:00:03",
+                      0: "Dec 11, 24 11:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 11:30:03",
+                      0: "Dec 11, 24 11:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 12:00:03",
+                      0: "Dec 11, 24 12:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 12:30:03",
+                      0: "Dec 11, 24 12:30:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 13:00:03",
+                      0: "Dec 11, 24 13:00:03",
+                      s_close: "283400.00000",
+                      1: "283400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 13:30:03",
+                      0: "Dec 11, 24 13:30:03",
+                      s_close: "284200.00000",
+                      1: "284200.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 14:00:04",
+                      0: "Dec 11, 24 14:00:04",
+                      s_close: "284200.00000",
+                      1: "284200.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 14:30:03",
+                      0: "Dec 11, 24 14:30:03",
+                      s_close: "284200.00000",
+                      1: "284200.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 15:30:03",
+                      0: "Dec 11, 24 15:30:03",
+                      s_close: "284200.00000",
+                      1: "284200.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 16:00:03",
+                      0: "Dec 11, 24 16:00:03",
+                      s_close: "284200.00000",
+                      1: "284200.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 16:30:02",
+                      0: "Dec 11, 24 16:30:02",
+                      s_close: "284200.00000",
+                      1: "284200.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 17:00:03",
+                      0: "Dec 11, 24 17:00:03",
+                      s_close: "284400.00000",
+                      1: "284400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 17:30:03",
+                      0: "Dec 11, 24 17:30:03",
+                      s_close: "284400.00000",
+                      1: "284400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 18:00:03",
+                      0: "Dec 11, 24 18:00:03",
+                      s_close: "284400.00000",
+                      1: "284400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 18:30:03",
+                      0: "Dec 11, 24 18:30:03",
+                      s_close: "284400.00000",
+                      1: "284400.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 19:00:03",
+                      0: "Dec 11, 24 19:00:03",
+                      s_close: "284650.00000",
+                      1: "284650.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 19:30:02",
+                      0: "Dec 11, 24 19:30:02",
+                      s_close: "284650.00000",
+                      1: "284650.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 20:00:03",
+                      0: "Dec 11, 24 20:00:03",
+                      s_close: "284650.00000",
+                      1: "284650.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 20:30:02",
+                      0: "Dec 11, 24 20:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 21:00:04",
+                      0: "Dec 11, 24 21:00:04",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 21:30:02",
+                      0: "Dec 11, 24 21:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 22:00:03",
+                      0: "Dec 11, 24 22:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 22:30:03",
+                      0: "Dec 11, 24 22:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 23:00:03",
+                      0: "Dec 11, 24 23:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 11, 24 23:30:03",
+                      0: "Dec 11, 24 23:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 00:00:03",
+                      0: "Dec 12, 24 00:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 00:30:03",
+                      0: "Dec 12, 24 00:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 01:00:03",
+                      0: "Dec 12, 24 01:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 01:30:02",
+                      0: "Dec 12, 24 01:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 02:00:02",
+                      0: "Dec 12, 24 02:00:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 02:30:02",
+                      0: "Dec 12, 24 02:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 03:00:08",
+                      0: "Dec 12, 24 03:00:08",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 03:30:02",
+                      0: "Dec 12, 24 03:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 04:00:03",
+                      0: "Dec 12, 24 04:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 04:30:03",
+                      0: "Dec 12, 24 04:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 05:00:04",
+                      0: "Dec 12, 24 05:00:04",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 05:30:02",
+                      0: "Dec 12, 24 05:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 06:00:03",
+                      0: "Dec 12, 24 06:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 06:30:02",
+                      0: "Dec 12, 24 06:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 07:00:03",
+                      0: "Dec 12, 24 07:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 07:30:03",
+                      0: "Dec 12, 24 07:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 08:00:03",
+                      0: "Dec 12, 24 08:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 08:30:03",
+                      0: "Dec 12, 24 08:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 09:00:03",
+                      0: "Dec 12, 24 09:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 09:30:03",
+                      0: "Dec 12, 24 09:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 10:00:03",
+                      0: "Dec 12, 24 10:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 10:30:02",
+                      0: "Dec 12, 24 10:30:02",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 11:00:03",
+                      0: "Dec 12, 24 11:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 11:30:03",
+                      0: "Dec 12, 24 11:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 12:00:03",
+                      0: "Dec 12, 24 12:00:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 12:30:03",
+                      0: "Dec 12, 24 12:30:03",
+                      s_close: "284700.00000",
+                      1: "284700.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 13:00:03",
+                      0: "Dec 12, 24 13:00:03",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 13:30:03",
+                      0: "Dec 12, 24 13:30:03",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 14:00:05",
+                      0: "Dec 12, 24 14:00:05",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 14:30:02",
+                      0: "Dec 12, 24 14:30:02",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 15:00:04",
+                      0: "Dec 12, 24 15:00:04",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 15:30:02",
+                      0: "Dec 12, 24 15:30:02",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 16:00:03",
+                      0: "Dec 12, 24 16:00:03",
+                      s_close: "285200.00000",
+                      1: "285200.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 16:30:02",
+                      0: "Dec 12, 24 16:30:02",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 17:00:04",
+                      0: "Dec 12, 24 17:00:04",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 17:30:03",
+                      0: "Dec 12, 24 17:30:03",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 18:00:05",
+                      0: "Dec 12, 24 18:00:05",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 18:30:03",
+                      0: "Dec 12, 24 18:30:03",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 19:00:03",
+                      0: "Dec 12, 24 19:00:03",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 19:30:03",
+                      0: "Dec 12, 24 19:30:03",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 20:00:03",
+                      0: "Dec 12, 24 20:00:03",
+                      s_close: "286100.00000",
+                      1: "286100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 20:30:02",
+                      0: "Dec 12, 24 20:30:02",
+                      s_close: "284100.00000",
+                      1: "284100.00000",
+                    },
+                    {
+                      s_date: "Dec 12, 24 21:00:04",
+                      0: "Dec 12, 24 21:00:04",
+                      s_close: "284100.00000",
+                      1: "284100.00000",
+                    },
+                  ],
+                };
+                // console.log('labels1',jsonfile)
+                var labels = jsonfile.data.map(function (e) {
+                  if (e.snapshot_date) {
+                    return e.snapshot_date;
+                  }
+                  return e.s_date;
+                });
+
+                var data = jsonfile.data.map(function (e) {
+                  if (e.close) {
+                    return e.close;
+                  }
+                  return e.s_close;
+                });
+
+                var ctx = document.getElementById("commodity_price_chart-1d");
+                if (ctx) {
+                  ctx.height = 120;
+                  var originalLineDraw = Chart.controllers.line.prototype.draw;
+                  Chart.helpers.extend(Chart.controllers.line.prototype, {
+                    draw: function () {
+                      originalLineDraw.apply(this, arguments);
+
+                      var chart = this.chart;
+                      var ctx = chart.chart.ctx;
+
+                      if (
+                        this.chart.tooltip._active &&
+                        this.chart.tooltip._active.length
+                      ) {
+                        var activePoint = this.chart.tooltip._active[0];
+                        var ctx = this.chart.ctx;
+                        var x = activePoint.tooltipPosition().x;
+                        var topY = this.chart.scales["y-axis-0"].top;
+                        var bottomY = this.chart.scales["y-axis-0"].bottom;
+
+                        // draw line
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.moveTo(x, topY);
+                        ctx.lineTo(x, bottomY);
+                        ctx.lineWidth = 0.5;
+                        ctx.strokeStyle = "#012b3f";
+                        ctx.setLineDash([3]);
+                        ctx.stroke();
+                        ctx.restore();
+                      }
+                    },
+                  });
+                  var chart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                      labels: labels,
+                      datasets: [
+                        {
+                          label: "GOLD",
+                          borderColor: "rgba(0, 123, 255, 0.9)",
+                          borderWidth: "2",
+                          backgroundColor: "rgba(0, 123, 255, 0.3)",
+                          pointHighlightStroke: "rgba(26,179,148,1)",
+                          data: data,
+                        },
+                      ],
+                    },
+                    options: {
+                      legend: {
+                        display: false,
+                      },
+                      elements: {
+                        point: {
+                          radius: 0,
+                        },
+                      },
+                      responsive: true,
+                      tooltips: {
+                        custom: function (tooltip) {
+                          if (!tooltip) return;
+                          // disable displaying the color box;
+                          tooltip.displayColors = false;
+                        },
+                        callbacks: {
+                          label: function (tooltipItem) {
+                            return "" + Number(tooltipItem.yLabel);
+                          },
+                        },
+                        intersect: false,
+                        titleFontStyle: "normal",
+                        bodyFontStyle: "bold",
+                        backgroundColor: "rgba(0, 123, 255, 0.9)",
+                      },
+                      hover: {
+                        mode: "nearest",
+                        intersect: true,
+                      },
+                      scales: {
+                        xAxes: [
+                          {
+                            ticks: {
+                              fontColor: "#9aa0ac", // Font Color
+                              autoSkip: true,
+                              maxTicksLimit: 10,
+                              maxRotation: 0,
+                              minRotation: 0,
+                            },
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                        yAxes: [
+                          {
+                            ticks: {
+                              beginAtZero: false,
+                              fontColor: "#9aa0ac", // Font Color
+                            },
+                            gridLines: {
+                              display: false,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  });
+                }
+              </script>
+            </div>
+            <div
+              class="tab-pane fade"
               id="nav-1w"
               role="tabpanel"
               aria-labelledby="nav-1w-tab"
@@ -508,57 +1283,139 @@
               <div
                 class="chartjs-size-monitor"
                 style="
-                  position: absolute; inset: 0px; overflow: hidden;
-                  pointer-events: none; visibility: hidden; z-index: -1;
+                  position: absolute;
+                  inset: 0px;
+                  overflow: hidden;
+                  pointer-events: none;
+                  visibility: hidden;
+                  z-index: -1;
                 "
               >
                 <div
                   class="chartjs-size-monitor-expand"
-                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    overflow: hidden;
+                    pointer-events: none;
+                    visibility: hidden;
+                    z-index: -1;
+                  "
                 >
-                  <div style="position:absolute;width:100%;height:100%;left:0;top:0"></div>
+                  <div
+                    style="
+                      position: absolute;
+                      width: 1000000px;
+                      height: 1000000px;
+                      left: 0;
+                      top: 0;
+                    "
+                  ></div>
                 </div>
                 <div
                   class="chartjs-size-monitor-shrink"
-                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    overflow: hidden;
+                    pointer-events: none;
+                    visibility: hidden;
+                    z-index: -1;
+                  "
                 >
-                  <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                  <div
+                    style="
+                      position: absolute;
+                      width: 200%;
+                      height: 200%;
+                      left: 0;
+                      top: 0;
+                    "
+                  ></div>
                 </div>
               </div>
-                              <canvas
-                  id="commodity_price_chart"
-                  class=""
-                  height="592"
-                  style="display: block; width: 741px; height: 296px;"
-                  width="1482"
-                ></canvas>
-             
+              <canvas
+                id="commodity_price_chart"
+                class="chartjs-render-monitor"
+                height="380"
+                style="display: block; width: 951px; height: 380px"
+                width="951"
+              ></canvas>
             </div>
 
-            <div class="tab-pane fade" id="nav-1m" role="tabpanel" aria-labelledby="nav-1m-tab"></div>
+            <div
+              class="tab-pane fade"
+              id="nav-1m"
+              role="tabpanel"
+              aria-labelledby="nav-1m-tab"
+            ></div>
 
-            <div class="tab-pane fade" id="nav-3m" role="tabpanel" aria-labelledby="nav-3m-tab"></div>
-            <div class="tab-pane fade" id="nav-6m" role="tabpanel" aria-labelledby="nav-6m-tab"></div>
-            <div class="tab-pane fade" id="nav-1y" role="tabpanel" aria-labelledby="nav-1y-tab"></div>
-            <div class="tab-pane fade" id="nav-5y" role="tabpanel" aria-labelledby="nav-5y-tab"></div>
-            <div class="tab-pane fade" id="nav-10y" role="tabpanel" aria-labelledby="nav-10y-tab"></div>
-            <div class="tab-pane fade" id="nav-20y" role="tabpanel" aria-labelledby="nav-20y-tab"></div>
+            <div
+              class="tab-pane fade"
+              id="nav-3m"
+              role="tabpanel"
+              aria-labelledby="nav-3m-tab"
+            ></div>
+            <div
+              class="tab-pane fade"
+              id="nav-6m"
+              role="tabpanel"
+              aria-labelledby="nav-6m-tab"
+            ></div>
+            <div
+              class="tab-pane fade"
+              id="nav-1y"
+              role="tabpanel"
+              aria-labelledby="nav-1y-tab"
+            ></div>
+            <div
+              class="tab-pane fade"
+              id="nav-5y"
+              role="tabpanel"
+              aria-labelledby="nav-5y-tab"
+            ></div>
+            <div
+              class="tab-pane fade"
+              id="nav-10y"
+              role="tabpanel"
+              aria-labelledby="nav-10y-tab"
+            ></div>
+            <div
+              class="tab-pane fade"
+              id="nav-20y"
+              role="tabpanel"
+              aria-labelledby="nav-20y-tab"
+            ></div>
           </div>
         </div>
       </div>
     </div>
     <div id="commodities-trading" class="tab-pane fade">
       <div class="heading d-inline"></div>
- -->
+
       <!-- TradingView Widget BEGIN -->
       <div class="tradingview-widget-container mt-2">
         <div id="tradingview_0bb70" class="tradingview_market_history">
           <div
             id="tradingview_834f3-wrapper"
-            style="position: relative; box-sizing: content-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Trebuchet MS&quot;, Roboto, Ubuntu, sans-serif; margin: 0px auto !important; padding: 0px !important; width: 100%; height: 1400%;"
+            style="
+              position: relative;
+              box-sizing: content-box;
+              font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
+                Roboto, Ubuntu, sans-serif;
+              margin: 0px auto !important;
+              padding: 0px !important;
+              width: 100%;
+              height: 100%;
+            "
           >
             <iframe
-              class="gold-price"
               title="advanced chart TradingView widget"
               lang="en"
               id="tradingview_834f3"
@@ -567,42 +1424,43 @@
               scrolling="no"
               allowfullscreen="true"
               src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en#%7B%22symbol%22%3A%22TVC%3AGOLD%22%2C%22frameElementId%22%3A%22tradingview_834f3%22%2C%22interval%22%3A%2230%22%2C%22hide_side_toolbar%22%3A%220%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%223%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22withdateranges%22%3A%221%22%2C%22show_popup_button%22%3A%221%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22sarmaaya.pk%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22TVC%3AGOLD%22%2C%22page-uri%22%3A%22sarmaaya.pk%2Fcommodities%2Fsymbol%2FGOLD%22%7D"
-              style="width: 100%; height: 300%; margin: 0px !important; padding: 0px !important;"
+              style="
+                width: 100%;
+                height: 100%;
+                margin: 0px !important;
+                padding: 0px !important;
+              "
             ></iframe>
           </div>
         </div>
-        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script
+          type="text/javascript"
+          src="https://s3.tradingview.com/tv.js"
+        ></script>
         <script type="text/javascript">
-                  new TradingView.widget(
-          {
-          "autosize": true,
-          "symbol": "TVC:GOLD",
-          "interval": "30",
-          "timezone": "Etc/UTC",
-          "theme": "light",
-          "style": "3",
-          "locale": "en",
-          "toolbar_bg": "#f1f3f6",
-          "enable_publishing": false,
-          "withdateranges": true,
-          "hide_side_toolbar": false,
-          "allow_symbol_change": true,
-          "show_popup_button": true,
-          "popup_width": "1000",
-          "popup_height": "650",
-          "container_id": "tradingview_0bb70"
-          }
-                  );
+          new TradingView.widget({
+            autosize: true,
+            symbol: "TVC:GOLD",
+            interval: "30",
+            timezone: "Etc/UTC",
+            theme: "light",
+            style: "3",
+            locale: "en",
+            toolbar_bg: "#f1f3f6",
+            enable_publishing: false,
+            withdateranges: true,
+            hide_side_toolbar: false,
+            allow_symbol_change: true,
+            show_popup_button: true,
+            popup_width: "1000",
+            popup_height: "650",
+            container_id: "tradingview_0bb70",
+          });
         </script>
       </div>
       <!-- TradingView Widget END -->
       <div class="tradingview-widget-copyright">
-        <a href="https://www.tradingview.com/" target="_blank"
-          ><span
-            class="blue-text"
-            >Chart</span
-          ></a
-        >
+        <a href="https://www.tradingview.com/" target="_blank"><span class="blue-text">Chart</span></a>
         by TradingView
       </div>
     </div>

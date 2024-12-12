@@ -337,7 +337,219 @@
   >
   </div>
 -->
-<!--  -->
+<!-- 
+<div class="market-history">
+  <div class="row history_switch">
+    <div class="col-lg-9">
+      <div class="heading pt-2">
+        <h1 class="d-inline" title="GOLD (Today Price, Live Updates)">GOLD Rate in Pakistan today</h1>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="filter float-lg-right float-sm-left pt-1">
+        <nav class="border bg-white">
+          <div class="nav nav-tabs bg-white border-0" id="tabs" role="tablist">
+            <a
+              class="nav-item nav-link active"
+              data-target="#forex-price-history"
+              data-toggle="switch_tabs"
+              >Price</a
+            >
+            <a
+              href="GOLD"
+              class="nav-item nav-link"
+              data-target="#commodities-trading"
+              data-toggle="switch_tabs"
+              >TradingView</a
+            >
+            <!--
+              <a href="https://sarmaaya.pk/ajax/widgets/commodities_sip_new.php?symbol=GOLD" class="nav-item nav-link" data-target="#sip-chart" data-toggle="switch_tabs">SIP</a>
+            -->
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div id="tabsContent" class="tab-content">
+    <div id="forex-price-history" class="tab-pane fade active show">
+      <div class="card shadow-sm rounded-0 price_chart mt-2">
+        <div class="card-head">
+          <div class="row">
+            <div class="col-lg-5">
+              <h2 class="m-3 font-16" title="GOLD Price History">GOLD Price in Pakistan history</h2>
+            </div>
+            <div class="col-lg-7">
+              <div class="m-2 float-lg-right">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=1d"
+                      class="nav-item nav-link"
+                      id="nav-1d-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-1d"
+                      role="tab"
+                      aria-controls="nav-1d"
+                      aria-selected="true"
+                      title="1d"
+                      >1d</a
+                    >
+                    <a
+                      class="nav-item nav-link active"
+                      id="nav-1w-tab"
+                      data-toggle="tabajax"
+                      href="#nav-1w"
+                      role="tab"
+                      aria-controls="nav-1w"
+                      aria-selected="true"
+                      title="1w"
+                      >1w</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=1m"
+                      class="nav-item nav-link"
+                      id="nav-1m-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-1m"
+                      role="tab"
+                      aria-controls="nav-1m"
+                      aria-selected="true"
+                      title="1m"
+                      >1m</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=3m"
+                      class="nav-item nav-link"
+                      id="nav-3m-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-3m"
+                      role="tab"
+                      aria-controls="nav-3m"
+                      aria-selected="true"
+                      title="3m"
+                      >3m</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=6m"
+                      class="nav-item nav-link"
+                      id="nav-6m-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-6m"
+                      role="tab"
+                      aria-controls="nav-6m"
+                      aria-selected="true"
+                      title="6m"
+                      >6m</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=1y"
+                      class="nav-item nav-link"
+                      id="nav-1y-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-1y"
+                      role="tab"
+                      aria-controls="nav-1y"
+                      aria-selected="true"
+                      title="1y"
+                      >1y</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=5y"
+                      class="nav-item nav-link"
+                      id="nav-5y-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-5y"
+                      role="tab"
+                      aria-controls="nav-5y"
+                      aria-selected="true"
+                      title="5y"
+                      >5y</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=10y"
+                      class="nav-item nav-link"
+                      id="nav-10y-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-10y"
+                      role="tab"
+                      aria-controls="nav-10y"
+                      aria-selected="true"
+                      title="10y"
+                      >10y</a
+                    >
+                    <a
+                      href="https://sarmaaya.pk/ajax/widgets/commodity_price_chart.php?symbol=GOLD&amp;range=20y"
+                      class="nav-item nav-link"
+                      id="nav-20y-tab"
+                      data-toggle="tabajax"
+                      data-target="#nav-20y"
+                      role="tab"
+                      aria-controls="nav-20y"
+                      aria-selected="true"
+                      title="20y"
+                      >20y</a
+                    >
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade" id="nav-1d" role="tabpanel" aria-labelledby="nav-1d-tab"></div>
+            <div
+              class="tab-pane fade show active"
+              id="nav-1w"
+              role="tabpanel"
+              aria-labelledby="nav-1w-tab"
+            >
+              <div
+                class="chartjs-size-monitor"
+                style="
+                  position: absolute; inset: 0px; overflow: hidden;
+                  pointer-events: none; visibility: hidden; z-index: -1;
+                "
+              >
+                <div
+                  class="chartjs-size-monitor-expand"
+                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"
+                >
+                  <div style="position:absolute;width:100%;height:100%;left:0;top:0"></div>
+                </div>
+                <div
+                  class="chartjs-size-monitor-shrink"
+                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"
+                >
+                  <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                </div>
+              </div>
+                              <canvas
+                  id="commodity_price_chart"
+                  class=""
+                  height="592"
+                  style="display: block; width: 741px; height: 296px;"
+                  width="1482"
+                ></canvas>
+             
+            </div>
+
+            <div class="tab-pane fade" id="nav-1m" role="tabpanel" aria-labelledby="nav-1m-tab"></div>
+
+            <div class="tab-pane fade" id="nav-3m" role="tabpanel" aria-labelledby="nav-3m-tab"></div>
+            <div class="tab-pane fade" id="nav-6m" role="tabpanel" aria-labelledby="nav-6m-tab"></div>
+            <div class="tab-pane fade" id="nav-1y" role="tabpanel" aria-labelledby="nav-1y-tab"></div>
+            <div class="tab-pane fade" id="nav-5y" role="tabpanel" aria-labelledby="nav-5y-tab"></div>
+            <div class="tab-pane fade" id="nav-10y" role="tabpanel" aria-labelledby="nav-10y-tab"></div>
+            <div class="tab-pane fade" id="nav-20y" role="tabpanel" aria-labelledby="nav-20y-tab"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="commodities-trading" class="tab-pane fade">
+      <div class="heading d-inline"></div>
+ -->
       <!-- TradingView Widget BEGIN -->
       <div class="tradingview-widget-container mt-2">
         <div id="tradingview_0bb70" class="tradingview_market_history">

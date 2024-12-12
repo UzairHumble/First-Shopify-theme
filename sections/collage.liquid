@@ -227,7 +227,27 @@
     of gold, thus giving a comprehensive view of the gold market in Karachi during this period.</iframe
   >
 </div> -->
-  <div id="tabsContent" class="tab-content">
+  <div class="market-history">   
+                <div class="row history_switch">
+                    <div class="col-lg-9">
+                        <div class="heading pt-2">
+                        <h1 class="d-inline" title="GOLD (Today Price, Live Updates)">GOLD Rate in Pakistan today</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="filter float-lg-right float-sm-left pt-1">
+                            <nav class="border bg-white">
+                                <div class="nav nav-tabs bg-white border-0" id="tabs" role="tablist">
+                                    <a class="nav-item nav-link active" data-target="#forex-price-history" data-toggle="switch_tabs">Price</a>
+                                    <a href="GOLD" class="nav-item nav-link" data-target="#commodities-trading" data-toggle="switch_tabs">TradingView</a> 
+                                    <!-- <a href="https://sarmaaya.pk/ajax/widgets/commodities_sip_new.php?symbol=GOLD" class="nav-item nav-link" data-target="#sip-chart" data-toggle="switch_tabs">SIP</a> -->
+                                </div>
+                            </nav> 
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tabsContent" class="tab-content">
                     <div id="forex-price-history" class="tab-pane fade active show">
                         <div class="card shadow-sm rounded-0 price_chart mt-2"> 
                             <div class="card-head">
@@ -258,7 +278,7 @@
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade" id="nav-1d" role="tabpanel" aria-labelledby="nav-1d-tab"></div>
                                     <div class="tab-pane fade show active" id="nav-1w" role="tabpanel" aria-labelledby="nav-1w-tab"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-                                        <canvas id="commodity_price_chart" class="chartjs-render-monitor" height="538" style="display: block; width: 673px; height: 269px;" width="1346"></canvas>
+                                        <canvas id="commodity_price_chart" class="chartjs-render-monitor gold-price" height="592" style="display: block; width: 741px; height: 296px;" width="1482"></canvas>
                                     </div>
                                       
                                     <div class="tab-pane fade" id="nav-1m" role="tabpanel" aria-labelledby="nav-1m-tab"></div>
@@ -309,7 +329,8 @@
                         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" target="_blank"><span class="blue-text">Chart</span></a> by TradingView</div>
                     </div>
                     <div id="sip-chart" class="tab-pane fade"></div>
-                </div>
+                </div> 
+            </div>
 
 {% schema %}
 {

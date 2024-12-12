@@ -198,7 +198,7 @@
       "type": "test-section",
       "custom_css": [
         "iframe {padding: 20px; background-color: greenyellow;}",
-        ",.just-text {font-size: 14px; color: blueviolet; font-weight: bold; font-family: Arial;}"
+        ",.just-text {font-size: 14px; color: darkred; font-weight: bold; font-family: Arial;}"
       ],
       "settings": {
         "custom_liquid": "The line graph above presents a detailed insight into the daily gold rates in Karachi over the span of 30 days,\n  ranging from 15nd October 2023 to 16th November 2023. The statistics provided cover various karats and measurements of\n  gold, thus giving a comprehensive view of the gold market in Karachi during this period.\n<br>\nThis Graph is Adding by <a href=\"https://github.com/UzairHumble\">Uzair Malik!</a>"

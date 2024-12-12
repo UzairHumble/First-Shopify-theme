@@ -213,9 +213,19 @@
       {%- endfor -%}
     </div>
   </div>
-  <p class="gold-price">
-    curl -X GET 'https://www.goldapi.io/api/XAU/USD' \ -H 'x-access-token: goldapi-bq53o1sm4kidana-io'
-  </p>
+  <!-- <p class="gold-price"></p> -->
+  <iframe
+    class="gold-price"
+    height="600"
+    width="100%"
+    src="https://goldbroker.com/widget/live/XAU?currency=USD&amp;height=600"
+    frameborder="0"
+    scrolling="no"
+  >
+    The line graph above presents a detailed insight into the daily gold rates in Karachi over the span of 30 days,
+    ranging from 15nd October 2023 to 16th November 2023. The statistics provided cover various karats and measurements
+    of gold, thus giving a comprehensive view of the gold market in Karachi during this period.</iframe
+  >
 </div>
 
 {% schema %}

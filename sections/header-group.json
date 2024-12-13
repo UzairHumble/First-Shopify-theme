@@ -57,15 +57,10 @@
     "city_gold_rates_zXTMPH": {
       "type": "City-gold-rates",
       "custom_css": [
-        ".main-head {background-color: red; /* width: 100%; */ /* height: 100%; */}",
+        ".main-head {background-color: red; }",
         ",.head-1 {background-color: yellowgreen; margin: 20px; padding: 10px;}",
-        ",.myText-1 {/* color: red; */ /* font-family: Arial; */}",
-        ", .head-2 {background-color: blue; margin-top: 20px; padding:10px;}",
-        ".head-text {}",
-        ",.p-text-2 {}",
-        ",,.year-sheet-1 {}",
-        ",.div-2 {margin-top: 10px;}",
-        ".year-sheet-2 {}"
+        ",.head-2 {background-color: blue; margin-top: 20px; padding: 10px; margin-bottom: 20px;}",
+        ",.head-3 {background-color:skyblue}"
       ],
       "settings": {
         "custom_liquid": ""

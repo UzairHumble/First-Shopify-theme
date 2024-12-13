@@ -57,10 +57,10 @@
     "city_gold_rates_zXTMPH": {
       "type": "City-gold-rates",
       "custom_css": [
-        ".main-head {background-color: red; }",
-        ",.head-1 {background-color: yellowgreen; margin: 20px; padding: 10px;}",
+        ".head-1 {background-color: yellowgreen; margin: 20px; padding: 10px;}",
         ",.head-2 {background-color: blue; margin-top: 20px; padding: 10px; margin-bottom: 20px;}",
-        ",.head-3 {background-color:skyblue}"
+        ",.head-3 {background-color: skyblue; margin-top: 10px; padding: 10px; margin-bottom: 20px;}",
+        ",.head-4 {background-color: pink;}"
       ],
       "settings": {
         "custom_liquid": ""

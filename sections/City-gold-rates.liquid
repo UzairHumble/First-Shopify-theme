@@ -1,6 +1,17 @@
+{{ section.settings.custom_liquid }}
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+   "name": "Cities Gold Rate",
+   "settings": [
+   {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "Cities Gold Rate",
+      "info": "Add app snippets or other liquid code to create advanced customizations."
+   }],
+   "presets": [
+   {
+      "name": "Cities Gold Rate"
+   }]
+}
 {% endschema %}

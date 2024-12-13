@@ -58,7 +58,7 @@
       "type": "City-gold-rates",
       "custom_css": [
         ".head-1 {background-color: white; margin: 20px; padding: 10px;}",
-        ",.head-2 {background-color: white; margin-top: 20px; padding: 10px; margin-bottom: 20px;}",
+        " ,.head-2 {background-color: white; margin-top: 20px; padding: 10px; margin-bottom: 20px;}",
         ",.head-3 {background-color: white; margin-top: 10px; padding: 10px; margin-bottom: 20px;}",
         ",.head-4 {background-color: white;}"
       ],

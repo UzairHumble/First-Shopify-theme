@@ -34,89 +34,146 @@
     
     <div class="custom-content">
       <!-- Add any custom HTML or dynamic content here -->
-  
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-h2 {
-  margin-top: 20px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Gold Rates</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    h2 {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-<h2>Gold Rate in Pakistan Today is PKR 286,100</h2>
+  <h2>Gold Rate in Pakistan Today</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>GOLD PURITY</th>
-      <th>TOLA</th>
-      <th>10 GRAM</th>
-      <th>1 GRAM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>24K</td>
-      <td>Rs. 286,100</td>
-      <td>Rs. 245,285</td>
-      <td>Rs. 24,528.5</td> 
-    </tr>
-    <tr>
-      <td>22K</td>
-      <td>Rs. 262,326</td>
-      <td>Rs. 224,845</td>
-      <td>Rs. 22,484.5</td> 
-    </tr>
-    <tr>
-      <td>21K</td>
-      <td>Rs. 250,402</td>
-      <td>Rs. 214,625</td>
-      <td>Rs. 21,462.5</td> 
-    </tr>
-    <tr>
-      <td>20K</td>
-      <td>Rs. 238,478</td>
-      <td>Rs. 204,405</td>
-      <td>Rs. 20,440.5</td> 
-    </tr>
-    <tr>
-      <td>18K</td>
-      <td>Rs. 214,631</td>
-      <td>Rs. 183,964</td>
-      <td>Rs. 18,396.4</td> 
-    </tr>
-  </tbody>
-</table>
+  <!-- Gold Rate Table -->
+  <table id="gold-rate-table">
+    <thead>
+      <tr>
+        <th>GOLD PURITY</th>
+        <th>TOLA</th>
+        <th>10 GRAM</th>
+        <th>1 GRAM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>24K</td>
+        <td id="tola-24k">Rs. -</td>
+        <td id="gram10-24k">Rs. -</td>
+        <td id="gram1-24k">Rs. -</td> 
+      </tr>
+      <tr>
+        <td>22K</td>
+        <td id="tola-22k">Rs. -</td>
+        <td id="gram10-22k">Rs. -</td>
+        <td id="gram1-22k">Rs. -</td> 
+      </tr>
+      <tr>
+        <td>21K</td>
+        <td id="tola-21k">Rs. -</td>
+        <td id="gram10-21k">Rs. -</td>
+        <td id="gram1-21k">Rs. -</td> 
+      </tr>
+      <tr>
+        <td>20K</td>
+        <td id="tola-20k">Rs. -</td>
+        <td id="gram10-20k">Rs. -</td>
+        <td id="gram1-20k">Rs. -</td> 
+      </tr>
+      <tr>
+        <td>18K</td>
+        <td id="tola-18k">Rs. -</td>
+        <td id="gram10-18k">Rs. -</td>
+        <td id="gram1-18k">Rs. -</td> 
+      </tr>
+    </tbody>
+  </table>
 
-<h2>INTERNATIONAL GOLD RATES</h2>
+  <h2>INTERNATIONAL GOLD RATES</h2>
 
-<table>
-  <tr>
-    <td>Gold 24K Ounce</td>
-    <td>$ 2,336</td>
-  </tr>
-</table>
+  <!-- International Gold Price Table -->
+  <table>
+    <tr>
+      <td>Gold 24K Ounce</td>
+      <td id="ounce-24k">-</td>
+    </tr>
+  </table>
+
+  <script>
+    async function fetchGoldRates() {
+      try {
+        // Replace 'YOUR_API_ENDPOINT' and 'YOUR_API_KEY' with your actual API endpoint and key
+        const response = await fetch('https://api.goldapi.io/v1/latest', {
+          method: 'GET',
+          headers: {
+            'x-access-token': 'YOUR_API_KEY'
+          }
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          const rates = data.rates;
+
+          // Update gold prices for each purity level
+          document.getElementById('tola-24k').textContent = `Rs. ${rates['24K'].tola}`;
+          document.getElementById('gram10-24k').textContent = `Rs. ${rates['24K'].gram10}`;
+          document.getElementById('gram1-24k').textContent = `Rs. ${rates['24K'].gram1}`;
+
+          document.getElementById('tola-22k').textContent = `Rs. ${rates['22K'].tola}`;
+          document.getElementById('gram10-22k').textContent = `Rs. ${rates['22K'].gram10}`;
+          document.getElementById('gram1-22k').textContent = `Rs. ${rates['22K'].gram1}`;
+
+          document.getElementById('tola-21k').textContent = `Rs. ${rates['21K'].tola}`;
+          document.getElementById('gram10-21k').textContent = `Rs. ${rates['21K'].gram10}`;
+          document.getElementById('gram1-21k').textContent = `Rs. ${rates['21K'].gram1}`;
+
+          document.getElementById('tola-20k').textContent = `Rs. ${rates['20K'].tola}`;
+          document.getElementById('gram10-20k').textContent = `Rs. ${rates['20K'].gram10}`;
+          document.getElementById('gram1-20k').textContent = `Rs. ${rates['20K'].gram1}`;
+
+          document.getElementById('tola-18k').textContent = `Rs. ${rates['18K'].tola}`;
+          document.getElementById('gram10-18k').textContent = `Rs. ${rates['18K'].gram10}`;
+          document.getElementById('gram1-18k').textContent = `Rs. ${rates['18K'].gram1}`;
+
+          // Update international gold rate (Ounce)
+          document.getElementById('ounce-24k').textContent = `$ ${data.ounce['24K']}`;
+        } else {
+          console.error('Error fetching gold rates:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    // Fetch gold rates every second
+    setInterval(fetchGoldRates, 1000);
+    fetchGoldRates(); // Initial fetch to load rates immediately
+  </script>
 
 </body>
 </html>
+
+
       
     </div>
   </div>

@@ -34,7 +34,8 @@
     
     <div class="custom-content">
       <!-- Add any custom HTML or dynamic content here -->
- <!DOCTYPE html>
+ 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -121,58 +122,75 @@
 
   <script>
     async function fetchGoldRates() {
-      try {
+   try {
+       const response = await fetch('https://api.api-ninjas.com/v1/goldprice', {
+           headers: { 'X-Api-Key': 'aBcEspe4Aa7BEAx5vJz1UM6Y0616XREGUNPND5s2
+' }
+       });
+
+       if (!response.ok) {
+           throw new Error(`HTTP error! status: ${response.status}`);
+       }
+
+       const data = await response.json();
+       console.log("API Response:", data);
+
+       if (!data || !data[0] || !data[0].price) {
+           console.error("Unexpected API response format:", data);
+           return;
+       }
+
+       const ouncePriceUSD = data[0].price;
+       const exchangeRatePKRtoUSD = 286; // Adjust if needed
+       const ouncePricePKR = ouncePriceUSD * exchangeRatePKRtoUSD;
+       const gramPricePKR = ouncePricePKR / 31.1035;
+
+       const purityRates = {
+           '24K': 1,
+           '22K': 22 / 24,
+           '21K': 21 / 24,
+           '20K': 20 / 24,
+           '18K': 18 / 24
+       };
+
+       for (const [purity, factor] of Object.entries(purityRates)) {
+           document.getElementById(`tola-${purity.toLowerCase()}`).textContent = `Rs. ${(gramPricePKR * factor * 11.6638).toFixed(2)}`;
+           document.getElementById(`gram10-${purity.toLowerCase()}`).textContent = `Rs. ${(gramPricePKR * factor * 10).toFixed(2)}`;
+           document.getElementById(`gram1-${purity.toLowerCase()}`).textContent = `Rs. ${(gramPricePKR * factor).toFixed(2)}`;
+       }
+
+       document.getElementById('ounce-24k').textContent = `$ ${ouncePriceUSD.toFixed(2)}`;
+   } catch (error) {
+       console.error("Error fetching gold rates:", error);
+   }
+}
+
+fetchGoldRates();
+const express = require('express');
+const fetch = require('node-fetch');
+
+const app = express();
+const PORT = 3000;
+
+app.get('/goldprice', async (req, res) => {
+    try {
         const response = await fetch('https://api.api-ninjas.com/v1/goldprice', {
-          headers: {
-            'X-Api-Key': 'aBcEspe4Aa7BEAx5vJz1UM6Y0616XREGUNPND5s2
-'
-          }
+            headers: { 'X-Api-Key': '7yGwAg8Na/ItdtZCE7saNg==oLDfxoLJl1wIjwBG' }
         });
-
-        if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-
-        // Check if data exists and extract price per ounce
-        if (!data || !data[0] || !data[0].price) {
-          console.error('Invalid API response:', data);
-          return;
-        }
-
-        const ouncePriceUSD = data[0].price; // Gold price per ounce in USD
-        const exchangeRatePKRtoUSD = 286; // Adjust this value to match the current PKR to USD exchange rate
-        const ouncePricePKR = ouncePriceUSD * exchangeRatePKRtoUSD;
-        const gramPricePKR = ouncePricePKR / 31.1035; // Convert ounce to gram
-
-        // Conversion factors for different purities
-        const purityRates = {
-          '24K': 1,
-          '22K': 22 / 24,
-          '21K': 21 / 24,
-          '20K': 20 / 24,
-          '18K': 18 / 24
-        };
-
-        // Update the table with calculated rates
-        for (const [purity, factor] of Object.entries(purityRates)) {
-          document.getElementById(`tola-${purity.toLowerCase()}`).textContent = `Rs. ${(gramPricePKR * factor * 11.6638).toFixed(2)}`;
-          document.getElementById(`gram10-${purity.toLowerCase()}`).textContent = `Rs. ${(gramPricePKR * factor * 10).toFixed(2)}`;
-          document.getElementById(`gram1-${purity.toLowerCase()}`).textContent = `Rs. ${(gramPricePKR * factor).toFixed(2)}`;
-        }
-
-        // Update international gold rate (Ounce)
-        document.getElementById('ounce-24k').textContent = `$ ${ouncePriceUSD.toFixed(2)}`;
-      } catch (error) {
-        console.error('Error fetching gold rates:', error);
-      }
+        res.json(data);
+    } catch (error) {
+        res.status(500).send('Error fetching data');
     }
+});
 
-    // Fetch gold rates every second
-    setInterval(fetchGoldRates, 1000);
-    fetchGoldRates(); // Initial fetch to load rates immediately
+app.listen(PORT, () => console.log(`Proxy server running on port ${PORT}`));
+
   </script>
 
 </body>
 </html>
+
 
       
     </div>

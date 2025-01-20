@@ -139,6 +139,8 @@
            console.error("Unexpected API response format:", data);
            return;
        }
+console.log("API Response:", data);
+console.error("Error fetching data:", error);
 
        const ouncePriceUSD = data[0].price;
        const exchangeRatePKRtoUSD = 286; // Adjust if needed
@@ -166,7 +168,7 @@
 }
 
 fetchGoldRates();
-    console.log("API Response:", data);
+  
 
 const express = require('express');
 const fetch = require('node-fetch');

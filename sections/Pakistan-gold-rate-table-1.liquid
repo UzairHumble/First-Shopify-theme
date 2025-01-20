@@ -5,3 +5,111 @@
   }
 {% endschema %}
 
+<div id="gold-rates-section" class="gold-rates-container">
+  <h2>Gold Rates in Pakistan</h2>
+  <table border="1" id="gold-rates-table" style="width: 100%; text-align: center;">
+    <thead>
+      <tr>
+        <th>GOLD PURITY</th>
+        <th>TOLA</th>
+        <th>10 GRAM</th>
+        <th>1 GRAM</th>
+        <th>UPDATED AT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>24K</td>
+        <td id="tola-24k">-</td>
+        <td id="gram10-24k">-</td>
+        <td id="gram1-24k">-</td>
+        <td id="updated-at">-</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  async function fetchGoldRates() {
+    try {
+      const response = await fetch('YOUR_API_ENDPOINT', {
+        headers: {
+          'Authorization': 'Bearer YOUR_API_KEY'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+
+        // Assuming the API response contains gold rates in PKR
+        const rates = data.rates;
+        document.getElementById('tola-24k').textContent = rates['tola_24k'];
+        document.getElementById('gram10-24k').textContent = rates['10gram_24k'];
+        document.getElementById('gram1-24k').textContent = rates['1gram_24k'];
+        document.getElementById('updated-at').textContent = new Date().toLocaleTimeString();
+      } else {
+        console.error('Error fetching gold rates:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
+  // Fetch gold rates every second
+  setInterval(fetchGoldRates, 1000);
+  fetchGoldRates();
+</script>
+<div id="gold-rates-section" class="gold-rates-container">
+  <h2>Gold Rates in Pakistan</h2>
+  <table border="1" id="gold-rates-table" style="width: 100%; text-align: center;">
+    <thead>
+      <tr>
+        <th>GOLD PURITY</th>
+        <th>TOLA</th>
+        <th>10 GRAM</th>
+        <th>1 GRAM</th>
+        <th>UPDATED AT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>24K</td>
+        <td id="tola-24k">-</td>
+        <td id="gram10-24k">-</td>
+        <td id="gram1-24k">-</td>
+        <td id="updated-at">-</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+  async function fetchGoldRates() {
+    try {
+      const response = await fetch('YOUR_API_ENDPOINT', {
+        headers: {
+          'Authorization': 'Bearer YOUR_API_KEY'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+
+        // Assuming the API response contains gold rates in PKR
+        const rates = data.rates;
+        document.getElementById('tola-24k').textContent = rates['tola_24k'];
+        document.getElementById('gram10-24k').textContent = rates['10gram_24k'];
+        document.getElementById('gram1-24k').textContent = rates['1gram_24k'];
+        document.getElementById('updated-at').textContent = new Date().toLocaleTimeString();
+      } else {
+        console.error('Error fetching gold rates:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
+  // Fetch gold rates every second
+  setInterval(fetchGoldRates, 1000);
+  fetchGoldRates();
+</script>

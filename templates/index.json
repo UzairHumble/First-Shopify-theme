@@ -93,9 +93,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "gold_rate_table_pakistan_iVFkRe": {
+      "type": "Gold-rate-table-pakistan",
+      "settings": {
+        "heading": "",
+        "description": ""
+      }
     }
   },
   "order": [
+    "gold_rate_table_pakistan_iVFkRe",
     "rich_text",
     "featured_collection",
     "video",

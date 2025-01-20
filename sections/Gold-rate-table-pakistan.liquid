@@ -175,7 +175,8 @@ const PORT = 3000;
 app.get('/goldprice', async (req, res) => {
     try {
         const response = await fetch('https://api.api-ninjas.com/v1/goldprice', {
-            headers: { 'X-Api-Key': '7yGwAg8Na/ItdtZCE7saNg==oLDfxoLJl1wIjwBG' }
+            headers: { 'X-Api-Key': 'aBcEspe4Aa7BEAx5vJz1UM6Y0616XREGUNPND5s2
+' }
         });
         const data = await response.json();
         res.json(data);

@@ -123,14 +123,14 @@
     async function fetchGoldRates() {
       try {
         // Replace 'YOUR_API_ENDPOINT' and 'YOUR_API_KEY' with your actual API endpoint and key
-        const response = await fetch('https://api.api-ninjas.com/v1/goldprice', {
+        const response = await fetch('https://openexchangerates.org/api/latest.json?app_id=f4928705860649a2af8b41f2be95b0a4', {
           method: 'GET',
           headers: {
-            'x-access-token': '7yGwAg8Na/ItdtZCE7saNg==oLDfxoLJl1wIjwBG
-'
+            'x-access-token': 'f4928705860649a2af8b41f2be95b0a4'
           }
         });
 
+        
         if (response.ok) {
           const data = await response.json();
           const rates = data.rates;

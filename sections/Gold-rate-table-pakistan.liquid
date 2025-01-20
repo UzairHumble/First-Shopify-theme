@@ -34,7 +34,8 @@
     
     <div class="custom-content">
       <!-- Add any custom HTML or dynamic content here -->
- <!DOCTYPE html>
+ 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -78,33 +79,33 @@
     <tbody>
       <tr>
         <td>24K</td>
-        <td id="tola-24k">Rs. -</td>
-        <td id="gram10-24k">Rs. -</td>
-        <td id="gram1-24k">Rs. -</td> 
+        <td id="tola-24k">-</td>
+        <td id="gram10-24k">-</td>
+        <td id="gram1-24k">-</td> 
       </tr>
       <tr>
         <td>22K</td>
-        <td id="tola-22k">Rs. -</td>
-        <td id="gram10-22k">Rs. -</td>
-        <td id="gram1-22k">Rs. -</td> 
+        <td id="tola-22k">-</td>
+        <td id="gram10-22k">-</td>
+        <td id="gram1-22k">-</td> 
       </tr>
       <tr>
         <td>21K</td>
-        <td id="tola-21k">Rs. -</td>
-        <td id="gram10-21k">Rs. -</td>
-        <td id="gram1-21k">Rs. -</td> 
+        <td id="tola-21k">-</td>
+        <td id="gram10-21k">-</td>
+        <td id="gram1-21k">-</td> 
       </tr>
       <tr>
         <td>20K</td>
-        <td id="tola-20k">Rs. -</td>
-        <td id="gram10-20k">Rs. -</td>
-        <td id="gram1-20k">Rs. -</td> 
+        <td id="tola-20k">-</td>
+        <td id="gram10-20k">-</td>
+        <td id="gram1-20k">-</td> 
       </tr>
       <tr>
         <td>18K</td>
-        <td id="tola-18k">Rs. -</td>
-        <td id="gram10-18k">Rs. -</td>
-        <td id="gram1-18k">Rs. -</td> 
+        <td id="tola-18k">-</td>
+        <td id="gram10-18k">-</td>
+        <td id="gram1-18k">-</td> 
       </tr>
     </tbody>
   </table>
@@ -123,46 +124,49 @@
     async function fetchGoldRates() {
       try {
         const response = await fetch('https://api.metalpriceapi.com/v1/latest?api_key=60934967bd544d4e00078b68e4f3c0c7&base=XAU&currencies=PKR');
-        if (response.ok) {
-          const data = await response.json();
+        if (!response.ok) throw new Error('Network response was not ok');
 
-          // Base gold rate in PKR
-          const baseRate = data.rates.PKR;
+        const data = await response.json();
 
-          // Conversion factors for different purities
-          const purityRates = {
-            '24K': 1,
-            '22K': 22 / 24,
-            '21K': 21 / 24,
-            '20K': 20 / 24,
-            '18K': 18 / 24
-          };
-
-          // Update the table with calculated rates
-          for (const [purity, factor] of Object.entries(purityRates)) {
-            document.getElementById(`tola-${purity.toLowerCase()}`).textContent = `Rs. ${(baseRate * factor * 11.6638).toFixed(2)}`;
-            document.getElementById(`gram10-${purity.toLowerCase()}`).textContent = `Rs. ${(baseRate * factor * 10).toFixed(2)}`;
-            document.getElementById(`gram1-${purity.toLowerCase()}`).textContent = `Rs. ${(baseRate * factor).toFixed(2)}`;
-          }
-
-          // Update international gold rate (Ounce)
-          document.getElementById('ounce-24k').textContent = `$ ${(baseRate / 28.3495).toFixed(2)}`;
-        } else {
-          console.error('Error fetching gold rates:', response.statusText);
+        // Check if data exists
+        if (!data || !data.rates || !data.rates.PKR) {
+          console.error('Invalid API response:', data);
+          return;
         }
+
+        // Base gold rate in PKR
+        const baseRate = data.rates.PKR;
+
+        // Conversion factors for different purities
+        const purityRates = {
+          '24K': 1,
+          '22K': 22 / 24,
+          '21K': 21 / 24,
+          '20K': 20 / 24,
+          '18K': 18 / 24
+        };
+
+        // Update the table with calculated rates
+        for (const [purity, factor] of Object.entries(purityRates)) {
+          document.getElementById(`tola-${purity.toLowerCase()}`).textContent = `Rs. ${(baseRate * factor * 11.6638).toFixed(2)}`;
+          document.getElementById(`gram10-${purity.toLowerCase()}`).textContent = `Rs. ${(baseRate * factor * 10).toFixed(2)}`;
+          document.getElementById(`gram1-${purity.toLowerCase()}`).textContent = `Rs. ${(baseRate * factor).toFixed(2)}`;
+        }
+
+        // Update international gold rate (Ounce)
+        document.getElementById('ounce-24k').textContent = `$ ${(baseRate / 28.3495).toFixed(2)}`;
       } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching gold rates:', error);
       }
     }
 
     // Fetch gold rates every second
     setInterval(fetchGoldRates, 1000);
-    fetchGoldRates(); // Initial fetch to load rates immediately
+    fetchGoldRates(); // Initial fetch
   </script>
 
 </body>
 </html>
-
 
       
     </div>

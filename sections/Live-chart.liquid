@@ -1,3 +1,16 @@
+
+<!-- custom-section.liquid -->
+<section class="custom-section">
+  <div class="container">
+    {% if section.settings.heading != blank %}
+      <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <p>{{ section.settings.description }}</p>
+    
+    <div class="custom-content">
+      <!-- Add any custom HTML or dynamic content here -->
+      
 <section>
   <div class="market-history">
     <div class="row history_switch">
@@ -270,3 +283,72 @@
     </div>
   </div>
 </section>
+
+
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  .custom-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Custom Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -376,9 +376,16 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <!-- {% section 'Graph-chart-section' %} -->
+    {% comment %}
+    {% section 'Graph-chart-section' %} 
+      
+    {% endcomment %}
 
-    {% section 'Gold-rate-table-pakistan' %}}
+        {% comment %}
+    {% section 'Gold-rate-table-pakistan' %}
+      
+    {% endcomment %}
+
 
   </body>
 </html>

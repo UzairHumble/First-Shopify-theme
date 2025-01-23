@@ -514,21 +514,18 @@ Pakistani Cities gold price table
 
         const cities = ['karachi', 'islamabad', 'lahore', 'multan', 'peshawar'];
 
-       cities.forEach((city) => {
-    for (const [purity, multiplier] of Object.entries(conversions)) {
-        const perTola = (goldRatePerGram * multiplier * 11.664).toFixed(2);
+        cities.forEach((city) => {
+            for (const [purity, multiplier] of Object.entries(conversions)) {
+                const perTola = (goldRatePerGram * multiplier * 11.664).toFixed(2);
 
-        const cellId = `${city}-${purity}`;
-        const cell = document.getElementById(cellId);
+                const cellId = `${city}-${purity}`;
+                const cell = document.getElementById(cellId);
 
-        if (cell) {
-            cell.textContent = `Rs. ${perTola}`;
-        } else {
-            console.warn(`Cell for ${city} (${purity}) not found.`);
-        }
-    }
-});
-
+                if (cell) {
+                    cell.textContent = `Rs. ${perTola}`;
+                } else {
+                    console.warn(`Cell for ${city} (${purity}) not found.`);
+                }
             }
         });
     } catch (error) {

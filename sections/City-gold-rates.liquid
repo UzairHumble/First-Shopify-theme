@@ -45,7 +45,7 @@
       <a href="https://www.investing.com/" title="https://www.investing.com/">Jewelers</a> Association. Keep in mind
       these rates are subject to change following international market trends.&nbsp;
     </p> -->
-  </div>
+  <!-- </div> -->
 
   
 <!-- pakistan gold performance last i year -->
@@ -422,7 +422,20 @@ Pakistani Cities gold price table
   </div>
 </div> -->
 
-<!DOCTYPE html>
+
+
+    <!-- custom-section.liquid -->
+<section class="custom-section">
+  <div class="container">
+    {% if section.settings.heading != blank %}
+      <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <p>{{ section.settings.description }}</p>
+    
+    <div class="custom-content">
+      <!-- Add any custom HTML or dynamic content here -->
+      <!DOCTYPE html>
 <html lang="en">
 <head>
   
@@ -533,4 +546,19 @@ setInterval(fetchCityGoldRates, 60000);
     </script>
   </body>
   </html
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  .custom-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
+
   

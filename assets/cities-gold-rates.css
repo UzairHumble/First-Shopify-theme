@@ -147,3 +147,6 @@ body {
     color: #0056b3;
   }
 }
+.link-line {
+  text-decoration-line: none;
+}

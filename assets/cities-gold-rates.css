@@ -125,7 +125,8 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    /* overflow: hidden; */
+    overflow: hidden;
+    width: 100px;
   }
 
   .table tbody tr td {

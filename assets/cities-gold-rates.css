@@ -129,7 +129,7 @@ body {
   }
 
   .table tbody tr td {
-    flex: 2;
+    flex: 1;
     padding: 10px;
     font-size: 14px;
     border: none;
@@ -138,7 +138,7 @@ body {
   }
 
   .table tbody tr:nth-child(even) td {
-    background-color: #f9f9f9;
+    background-color: #fff;
   }
 
   .table tbody tr td a {

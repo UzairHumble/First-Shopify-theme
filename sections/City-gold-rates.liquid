@@ -442,11 +442,11 @@ Pakistani Cities gold price table
             <link rel="stylesheet" type="text/css" href="{{ 'cities-gold-rates.css' | asset_url }}">
 </head>
   <body>
-    <div class="section mb_25">
+   
     <div class="section_title">
         <div class="title">Gold Price Today in Major Cities of Pakistan</div>
     </div>
-    <div class="table-responsive">
+  
  <tbody>
     <tr data-city="karachi">
         <th><a href="/finance/gold_rate/karachi">Karachi</a></th>
@@ -476,6 +476,7 @@ Pakistani Cities gold price table
 </tbody>
 
 
+    
     <script>
       async function fetchCityGoldRates() {
     const apiKey = 'XNA5TVIOQDQLUESMEHCC761SMEHCC';
@@ -535,10 +536,12 @@ fetchCityGoldRates();
 setInterval(fetchCityGoldRates, 60000);
 
     </script>
+
   </body>
   </html
-    </div>
-  </div>
+    
+
+
 </section>
 
 <style>

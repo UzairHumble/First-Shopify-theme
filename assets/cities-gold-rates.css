@@ -132,7 +132,7 @@ body {
   .table tbody tr td {
     flex: 1;
     padding: 10px;
-    font-size: 14px;
+    font-size: 24px;
     border: none;
     text-align: center;
     background-color: #fff;
@@ -147,8 +147,9 @@ body {
     color: #0056b3;
   }
 }
-.link-line {
+/* .link-line {
   text-decoration-line: none;
   color: #333;
-  cursor: none;
+  
 }
+ */

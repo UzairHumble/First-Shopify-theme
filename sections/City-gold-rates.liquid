@@ -442,7 +442,7 @@ Pakistani Cities gold price table
     <link rel="stylesheet" type="text/css" href="{{ 'cities-gold-rates.css' | asset_url }}">
 </head>
   <body>
-    <div class="section mb_25">
+    <!-- <div class="section mb_25">
     <div class="section_title">
         <div class="title">Gold Price Today in Major Cities of Pakistan</div>
     </div>
@@ -538,6 +538,75 @@ Pakistani Cities gold price table
 fetchCityGoldRates();
 setInterval(fetchCityGoldRates, 60000);
 
+    </script> -->
+
+
+    <div class="section mb_25">
+    <div class="section_title">
+        <div class="title">Gold Price Today in Major Cities of Pakistan</div>
+    </div>
+    <div class="table-responsive">
+        <table class="table" id="gold-price-table">
+            <thead>
+                <tr>
+                    <th scope="col">City</th>
+                    <th scope="col">Gold 24K Tola</th>
+                    <th scope="col">Gold 22K Tola</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <script>
+const cities = ["Karachi", "Islamabad", "Lahore", "Multan", "Peshawar"];
+const goldTableBody = document.querySelector("#gold-price-table tbody");
+
+const apiEndpoint = "https://api.metals.dev/v1/latest";
+const apiKey = "XNA5TVIOQDQLUESMEHCC761SMEHCC";
+
+// Conversion factors for tola and karat differences
+const tolaConversionFactor = 11.664;
+const karat22ConversionFactor = 0.916; // 22K gold = 91.6% of 24K gold
+
+async function fetchGoldPrices() {
+    try {
+        const response = await fetch(`${apiEndpoint}?api_key=${apiKey}&currency=PKR&unit=g`);
+        const data = await response.json();
+
+        if (data.status !== "success") {
+            throw new Error("Failed to fetch gold prices");
+        }
+
+        // Extract gold rate per gram in PKR
+        const goldRatePerGram = data.metals.gold;
+
+        // Populate the table with dynamically calculated prices
+        cities.forEach((city) => {
+            const gold24KPerTola = (goldRatePerGram * tolaConversionFactor).toFixed(2);
+            const gold22KPerTola = (gold24KPerTola * karat22ConversionFactor).toFixed(2);
+
+            const row = `
+                <tr>
+                    <th><a href="/finance/gold_rate/${city.toLowerCase()}">${city}</a></th>
+                    <td class="txt_blue">Rs. ${gold24KPerTola}</td>
+                    <td class="txt_green">Rs. ${gold22KPerTola}</td>
+                </tr>
+            `;
+            goldTableBody.insertAdjacentHTML("beforeend", row);
+        });
+    } catch (error) {
+        console.error("Error fetching or processing gold prices:", error);
+    }
+}
+
+// Fetch and populate prices on page load
+fetchGoldPrices();
+
+      
     </script>
   </body>
     </html>

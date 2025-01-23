@@ -98,7 +98,6 @@ body {
 @media (max-width: 480px) {
   .table {
     display: block;
-    width: 200px;
   }
 
   .table thead {
@@ -114,6 +113,7 @@ body {
     padding: 10px;
     text-align: left;
     color: #fff;
+    width: 200px;
   }
 
   .table tbody {

@@ -101,7 +101,18 @@ body {
   }
 
   .table thead {
-    display: none;
+    display: table-header-group; /* Ensure header remains visible */
+    background-color: #007bff; /* Match header color */
+    position: sticky; /* Keep the header visible on scroll */
+    top: 0;
+    z-index: 10;
+  }
+
+  .table thead th {
+    font-size: 14px;
+    padding: 10px;
+    text-align: left;
+    color: #fff;
   }
 
   .table tbody {
@@ -110,7 +121,7 @@ body {
 
   .table tbody tr {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Maintain row structure */
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -118,12 +129,11 @@ body {
   }
 
   .table tbody tr td {
-    display: flex;
-    justify-content: space-between;
+    flex: 1;
     padding: 10px;
     font-size: 14px;
     border: none;
-    text-align: left;
+    text-align: center;
     background-color: #fff;
   }
 
@@ -131,17 +141,8 @@ body {
     background-color: #f9f9f9;
   }
 
-  .table tbody tr td::before {
-    content: attr(data-label);
-    flex-shrink: 0;
-    font-weight: bold;
-    color: #555;
-    margin-right: 10px;
-  }
-
-  .txt_blue,
-  .txt_green {
-    margin: 0;
+  .table tbody tr td a {
     font-size: 14px;
+    color: #0056b3;
   }
 }

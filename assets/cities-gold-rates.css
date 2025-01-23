@@ -98,6 +98,7 @@ body {
 @media (max-width: 480px) {
   .table {
     display: block;
+    width: 200px;
   }
 
   .table thead {
@@ -106,7 +107,6 @@ body {
     position: sticky; /* Keep the header visible on scroll */
     top: 0;
     z-index: 10;
-    width: 200px;
   }
 
   .table thead th {

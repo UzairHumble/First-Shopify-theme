@@ -121,7 +121,7 @@ body {
   }
 
   .table tbody tr {
-    display: flex;
+    display: block;
     flex-direction: row; /* Maintain row structure */
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -132,7 +132,7 @@ body {
   .table tbody tr td {
     flex: 1;
     padding: 10px;
-    font-size: 24px;
+    font-size: 14px;
     border: none;
     text-align: center;
     background-color: #fff;

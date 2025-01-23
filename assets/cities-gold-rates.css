@@ -150,4 +150,5 @@ body {
 .link-line {
   text-decoration-line: none;
   color: #333;
+  cursor: none;
 }

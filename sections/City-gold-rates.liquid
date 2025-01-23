@@ -437,8 +437,9 @@ Pakistani Cities gold price table
       <!-- Add any custom HTML or dynamic content here -->
       <!DOCTYPE html>
 <html lang="en">
-<head>
   
+<head>
+            <link rel="stylesheet" type="text/css" href="{{ 'cities-gold-rates.css' | asset_url }}">
 </head>
   <body>
     <div class="section mb_25">
@@ -446,44 +447,34 @@ Pakistani Cities gold price table
         <div class="title">Gold Price Today in Major Cities of Pakistan</div>
     </div>
     <div class="table-responsive">
-        <table class="table" id="gold-prices-table">
-            <thead>
-                <tr>
-                    <th scope="col">City</th>
-                    <th scope="col">Gold 24K Tola</th>
-                    <th scope="col">Gold 22K Tola</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-city="karachi">
-                    <th><a href="/finance/gold_rate/karachi">Karachi</a></th>
-                    <td class="txt_blue" id="karachi-24k">--</td>
-                    <td class="txt_green" id="karachi-22k">--</td>
-                </tr>
-                <tr data-city="islamabad">
-                    <th><a href="/finance/gold_rate/islamabad">Islamabad</a></th>
-                    <td class="txt_blue" id="islamabad-24k">--</td>
-                    <td class="txt_green" id="islamabad-22k">--</td>
-                </tr>
-                <tr data-city="lahore">
-                    <th><a href="/finance/gold_rate/lahore">Lahore</a></th>
-                    <td class="txt_blue" id="lahore-24k">--</td>
-                    <td class="txt_green" id="lahore-22k">--</td>
-                </tr>
-                <tr data-city="multan">
-                    <th><a href="/finance/gold_rate/multan">Multan</a></th>
-                    <td class="txt_blue" id="multan-24k">--</td>
-                    <td class="txt_green" id="multan-22k">--</td>
-                </tr>
-                <tr data-city="peshawar">
-                    <th><a href="/finance/gold_rate/peshawar">Peshawar</a></th>
-                    <td class="txt_blue" id="peshawar-24k">--</td>
-                    <td class="txt_green" id="peshawar-22k">--</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+ <tbody>
+    <tr data-city="karachi">
+        <th><a href="/finance/gold_rate/karachi">Karachi</a></th>
+        <td class="txt_blue" id="karachi-24k" data-label="Gold 24K Tola">--</td>
+        <td class="txt_green" id="karachi-22k" data-label="Gold 22K Tola">--</td>
+    </tr>
+    <tr data-city="islamabad">
+        <th><a href="/finance/gold_rate/islamabad">Islamabad</a></th>
+        <td class="txt_blue" id="islamabad-24k" data-label="Gold 24K Tola">--</td>
+        <td class="txt_green" id="islamabad-22k" data-label="Gold 22K Tola">--</td>
+    </tr>
+    <tr data-city="lahore">
+        <th><a href="/finance/gold_rate/lahore">Lahore</a></th>
+        <td class="txt_blue" id="lahore-24k" data-label="Gold 24K Tola">--</td>
+        <td class="txt_green" id="lahore-22k" data-label="Gold 22K Tola">--</td>
+    </tr>
+    <tr data-city="multan">
+        <th><a href="/finance/gold_rate/multan">Multan</a></th>
+        <td class="txt_blue" id="multan-24k" data-label="Gold 24K Tola">--</td>
+        <td class="txt_green" id="multan-22k" data-label="Gold 22K Tola">--</td>
+    </tr>
+    <tr data-city="peshawar">
+        <th><a href="/finance/gold_rate/peshawar">Peshawar</a></th>
+        <td class="txt_blue" id="peshawar-24k" data-label="Gold 24K Tola">--</td>
+        <td class="txt_green" id="peshawar-22k" data-label="Gold 22K Tola">--</td>
+    </tr>
+</tbody>
+
 
     <script>
       async function fetchCityGoldRates() {

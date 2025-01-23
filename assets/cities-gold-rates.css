@@ -123,10 +123,9 @@ body {
     display: flex;
     flex-direction: row; /* Maintain row structure */
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
     border-radius: 5px;
     overflow: hidden;
-    width: 100px;
   }
 
   .table tbody tr td {

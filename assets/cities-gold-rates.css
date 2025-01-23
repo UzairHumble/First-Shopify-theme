@@ -106,6 +106,7 @@ body {
     position: sticky; /* Keep the header visible on scroll */
     top: 0;
     z-index: 10;
+    width: 200px;
   }
 
   .table thead th {
@@ -138,7 +139,7 @@ body {
   }
 
   .table tbody tr:nth-child(even) td {
-    background-color: #fff;
+    background-color: #f9f9f9;
   }
 
   .table tbody tr td a {

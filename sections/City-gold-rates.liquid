@@ -24,17 +24,17 @@
 
 <!-- karachi table -->
 
-<div class="main-head" style="margin: 70px;">
+<!-- <div class="main-head" style="margin: 70px;"> -->
   <!-- Today Gold Rate Div -->
-  <div class="head-1" style="margin: 50px;">
-    <h2 style="text-align: left;" data-mce-style="text-align: left;"><b>Today Gold Rate&nbsp;</b></h2>
-
+  <!-- <div class="head-1" style="margin: 50px;">
+    <h2 style="text-align: left;" data-mce-style="text-align: left;"><b>Today Gold Rate&nbsp;</b></h2> -->
+<!-- 
     <iframe
       class="frame-1"
       src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSpcrDqeHiHaOmpZuLvtTEjCqln6-KlMAypVpSOKCX3B2067Q67j6WIC_KCJqD0dI45HdypmDIvUMwH/pubhtml?gid=1883462982&amp;single=true&amp;widget=true&amp;headers=false"
       width="800"
       height="300"
-    ></iframe>
+    ></iframe> -->
 
     <!-- <p class="mytext-1" style="text-align: left;">
       Today's Gold Prices in Karachi reveal that 24K gold is priced at 
@@ -421,3 +421,116 @@ Pakistani Cities gold price table
     </table>
   </div>
 </div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+  <body>
+    <div class="section mb_25">
+    <div class="section_title">
+        <div class="title">Gold Price Today in Major Cities of Pakistan</div>
+    </div>
+    <div class="table-responsive">
+        <table class="table" id="gold-prices-table">
+            <thead>
+                <tr>
+                    <th scope="col">City</th>
+                    <th scope="col">Gold 24K Tola</th>
+                    <th scope="col">Gold 22K Tola</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-city="karachi">
+                    <th><a href="/finance/gold_rate/karachi">Karachi</a></th>
+                    <td class="txt_blue" id="karachi-24k">--</td>
+                    <td class="txt_green" id="karachi-22k">--</td>
+                </tr>
+                <tr data-city="islamabad">
+                    <th><a href="/finance/gold_rate/islamabad">Islamabad</a></th>
+                    <td class="txt_blue" id="islamabad-24k">--</td>
+                    <td class="txt_green" id="islamabad-22k">--</td>
+                </tr>
+                <tr data-city="lahore">
+                    <th><a href="/finance/gold_rate/lahore">Lahore</a></th>
+                    <td class="txt_blue" id="lahore-24k">--</td>
+                    <td class="txt_green" id="lahore-22k">--</td>
+                </tr>
+                <tr data-city="multan">
+                    <th><a href="/finance/gold_rate/multan">Multan</a></th>
+                    <td class="txt_blue" id="multan-24k">--</td>
+                    <td class="txt_green" id="multan-22k">--</td>
+                </tr>
+                <tr data-city="peshawar">
+                    <th><a href="/finance/gold_rate/peshawar">Peshawar</a></th>
+                    <td class="txt_blue" id="peshawar-24k">--</td>
+                    <td class="txt_green" id="peshawar-22k">--</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <script>
+      async function fetchCityGoldRates() {
+    const apiKey = 'XNA5TVIOQDQLUESMEHCC761SMEHCC';
+    const endpoint = `https://api.metals.dev/v1/latest?api_key=${apiKey}&currency=PKR&unit=g`;
+
+    try {
+        const response = await fetch(endpoint);
+
+        if (!response.ok) {
+            console.error(`HTTP error! Status: ${response.status}`);
+            alert('Failed to fetch gold rates. Please try again later.');
+            return;
+        }
+
+        const data = await response.json();
+        console.log('API Response:', data);
+
+        if (!data.metals || !data.metals.gold) {
+            console.error('Gold rate data missing in API response.');
+            alert('Invalid API response. Please try again later.');
+            return;
+        }
+
+        const goldRatePerGram = data.metals.gold; // Gold price per gram
+        console.log('Gold Rate (per gram):', goldRatePerGram);
+
+        // Conversion for different purities
+        const conversions = {
+            '24k': 1,
+            '22k': 0.916,
+        };
+
+        const cities = ['karachi', 'islamabad', 'lahore', 'multan', 'peshawar'];
+
+        cities.forEach((city) => {
+            for (const [purity, multiplier] of Object.entries(conversions)) {
+                const perTola = (goldRatePerGram * multiplier * 11.664).toFixed(2);
+
+                const cellId = `${city}-${purity}`;
+                const cell = document.getElementById(cellId);
+
+                if (cell) {
+                    cell.textContent = `Rs. ${perTola}`;
+                } else {
+                    console.warn(`Cell for ${city} (${purity}) not found.`);
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error fetching gold rates:', error);
+        alert('An error occurred while fetching gold rates. Please try again later.');
+    }
+}
+
+// Fetch city gold rates immediately and refresh every minute
+fetchCityGoldRates();
+setInterval(fetchCityGoldRates, 60000);
+
+    </script>
+  </body>
+  </html
+  
